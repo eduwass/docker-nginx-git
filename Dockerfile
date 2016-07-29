@@ -33,6 +33,7 @@ ADD scripts/docker-hook /usr/bin/docker-hook
 ADD scripts/hook-listener /usr/bin/hook-listener
 
 # Setup permissions
+RUN chmod 755 /usr/bin/pull && chmod 755 /usr/bin/push && chmod 755 /usr/bin/letsencrypt-setup && chmod 755 /usr/bin/letsencrypt-renew && chmod 755 /start.sh
 RUN chmod +x /usr/bin/docker-hook
 RUN chmod +x /usr/bin/hook-listener
 
